@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yg.j1902.mapper.CertUtypeMapper">
+
+    <insert id="add">
+        INSERT
+        INTO
+        cert_utype
+        (certname,utype)
+        VALUES
+        <foreach collection="list" item="i" separator=",">
+            (#{i.certname}, #{i.utype})
+        </foreach>
+    </insert>
+<!--清空-->
+    <delete id="clean">
+        DELETE
+        FROM
+        cert_utype
+
+    </delete>
+
+
+
+    <select id="findAll" resultType="com.yg.j1902.vo.CertUtype">
+        SELECT
+        * FROM
+         cert_utype
+    </select>
+</mapper>

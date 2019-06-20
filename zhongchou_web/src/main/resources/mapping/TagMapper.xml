@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yg.j1902.mapper.TagMapper">
+
+    <resultMap id="tag" type="com.yg.j1902.vo.Tag">
+        <id property="id" column="tid"></id>
+<result property="tgType" column="tgType"></result>
+<collection property="tgNames" column="tid" ofType="com.yg.j1902.vo.TagName">
+    <id property="tgid" column="tgid"></id>
+    <result property="tid" column="tid"></result>
+    <result property="tgName" column="tgname"></result>
+</collection>
+
+    </resultMap>
+
+
+    <select id="findAll" resultMap="tag">
+        SELECT
+        tag.tid,tgid,tgtype,tgname
+        FROM
+        tag,taginfo
+        WHERE
+        tag.tid=taginfo.tid
+    </select>
+
+
+</mapper>

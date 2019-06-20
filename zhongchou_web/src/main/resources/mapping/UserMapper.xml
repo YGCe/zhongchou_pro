@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yg.j1902.mapper.UserMapper">
+
+
+    <!--findALL-->
+    <select id="findUsers" resultType="com.yg.j1902.vo.User">
+      SELECT
+         id,uname,upw,email,utype,shimin
+      FROM
+      USER
+    </select>
+    <!--findALL-->
+    <select id="findUserById" resultType="com.yg.j1902.vo.User">
+        SELECT
+        id,uname,upw,email,utype,shimin
+        FROM
+        USER
+        WHERE
+        id=#{id}
+    </select>
+    <select id="findUserByName" resultType="com.yg.j1902.vo.User">
+        SELECT
+        id,uname,upw,email,utype,shimin
+        FROM
+        USER
+        WHERE
+        uname=#{uname}
+    </select>
+
+    <select id="findUpwByName" parameterType="String" resultType="String">
+        SELECT
+        upw
+        FROM
+        USER
+        WHERE
+        uname=#{uname}
+    </select>
+    <insert id="addUser" parameterType="com.yg.j1902.vo.User">
+        INSERT
+        INTO
+        USER
+          (uname,upw,email,utype,shimin)
+        VALUES
+        (#{uname},#{upw},#{email},#{utype},#{shimin})
+    </insert>
+
+
+    <select id="getIdByName" parameterType="String" resultType="java.lang.Integer">
+        SELECT
+        id
+        FROM
+        USER
+        WHERE
+        uname=#{uname}
+    </select>
+
+
+    <select id="getShiminByName" parameterType="String" resultType="java.lang.Integer">
+        SELECT
+        shimin
+        FROM
+        USER
+        WHERE
+        uname=#{uname}
+    </select>
+    <select id="getEmailById" parameterType="int" resultType="String">
+        SELECT
+        email
+        FROM
+        USER
+        WHERE
+        id=#{id}
+    </select>
+    <!--findALL-->
+    <select id="findUsersByShiMin" resultType="com.yg.j1902.vo.User">
+        SELECT
+        id,uname,upw,email,utype,shimin
+        FROM
+        USER
+        WHERE
+      shimin=1
+    </select>
+
+    <update id="setShiMinOk" parameterType="int">
+        UPDATE
+        USER
+        SET
+         shimin=2
+        WHERE
+      id=#{id}
+    </update>
+    <update id="setShiMinX" parameterType="int">
+        UPDATE
+        USER
+        SET
+        shimin=3
+        WHERE
+        id=#{id}
+    </update>
+
+    <update id="setShiMinWait" parameterType="int">
+        UPDATE
+        USER
+        SET
+        shimin=1
+        WHERE
+        id=#{id}
+    </update>
+
+    <update id="updateUser" parameterType="com.yg.j1902.vo.User">
+        UPDATE
+        USER
+        SET
+        uname=#{uname},
+        email=#{email}
+        WHERE
+        id=#{id}
+    </update>
+</mapper>

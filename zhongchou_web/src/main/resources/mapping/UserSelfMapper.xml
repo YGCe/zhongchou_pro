@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yg.j1902.mapper.UserSelfMapper">
+
+    <insert id="add" parameterType="com.yg.j1902.vo.UserSelf">
+        INSERT
+        INTO
+       userself
+        (username,userone,usersession)
+        VALUES
+            (#{userName},#{userOne}, #{userSession})
+    </insert>
+
+</mapper>

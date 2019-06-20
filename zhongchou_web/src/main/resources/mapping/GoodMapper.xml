@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yg.j1902.mapper.GoodMapper">
+
+    <insert id="add" parameterType="com.yg.j1902.vo.Good">
+        INSERT
+        INTO
+        good
+        (gname,ginfo,gprice,gtime,gheadimg,gimg,gtel)
+        VALUES
+        (#{gname},#{ginfo},#{gprice},#{gtime},#{gheadimg},#{gimg},#{gtel})
+    </insert>
+
+    <update id="addBankNum">
+        UPDATE
+        good
+        SET
+        banknum=#{banknum}
+       WHERE
+       gid=#{id}
+    </update>
+
+    <select id="findGoods" resultType="com.yg.j1902.vo.Good">
+        SELECT
+        *
+        FROM
+        good
+    </select>
+
+    <select id="countItem" resultType="Integer">
+        SELECT
+        COUNT(gid)
+        FROM
+        good
+    </select>
+
+</mapper>

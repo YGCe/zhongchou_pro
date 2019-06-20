@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yg.j1902.mapper.UserInfoMapper">
+
+    <insert id="addUtype" parameterType="com.yg.j1902.vo.UserInfo">
+
+        INSERT
+        INTO
+        userinfo(
+        <trim suffixOverrides=",">
+            <if test="id!='' and id!=null">
+                id,
+            </if>
+            <if test="utype!='' and utype!=null">
+                utype,
+            </if>
+            <if test="realname!='' and realname!=null">
+                realname,
+            </if>
+            <if test="idcard!='' and idcard!=null">
+                idcard,
+            </if>
+            <if test="tel!='' and tel!=null">
+                tel,
+            </if>
+            <if test="img!='' and img!=null">
+                img,
+            </if>
+        </trim>
+        )VALUES(
+        <trim suffixOverrides=",">
+            <if test="id!='' and id!=null">
+                #{id},
+            </if>
+            <if test="utype!='' and utype!=null">
+                #{utype},
+            </if>
+            <if test="realname!='' and realname!=null">
+                #{realname},
+            </if>
+            <if test="idcard!='' and idcard!=null">
+                #{idcard},
+            </if>
+            <if test="tel!='' and tel!=null">
+                #{tel},
+            </if>
+            <if test="img!='' and img!=null">
+                #{img},
+            </if>
+        </trim>
+        ) ON DUPLICATE KEY UPDATE
+        <trim suffixOverrides=",">
+            <if test="id!='' and id!=null">
+                id=VALUES (id),
+            </if>
+            <if test="utype!='' and utype!=null">
+                utype=VALUES (utype),
+            </if>
+            <if test="realname!='' and realname!=null">
+                realname=VALUES (realname),
+            </if>
+            <if test="idcard!='' and idcard!=null">
+                idcard=VALUES (idcard),
+            </if>
+            <if test="tel!='' and tel!=null">
+                tel=VALUES (tel),
+            </if>
+            <if test="img!='' and img!=null">
+                img=VALUES (img),
+            </if>
+        </trim>
+    </insert>
+
+
+    <select id="getTelById" parameterType="int" resultType="String">
+        SELECT
+        tel
+        FROM
+        userinfo
+        WHERE
+        id=#{id}
+    </select>
+
+    <select id="getIdCard" parameterType="int" resultType="String">
+        SELECT
+        idcard
+        FROM
+        userinfo
+        WHERE
+        id=#{id}
+    </select>
+</mapper>

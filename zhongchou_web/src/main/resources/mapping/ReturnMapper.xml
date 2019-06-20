@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yg.j1902.mapper.RetMapper">
+
+    <insert parameterType="com.yg.j1902.vo.Ret" id="add">
+        INSERT
+        INTO
+        ret
+        (rnprice,rntype,content,rnimg,rnnum,lim,yunfei,fapiao,rntime,gid)
+        VALUES
+       (#{rnprice},#{rntype},#{content},#{rnimg},#{rnnum},#{limit},#{yunfei},#{fapiao},#{rntime},#{gid})
+    </insert>
+</mapper>

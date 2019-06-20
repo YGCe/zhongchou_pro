@@ -1,0 +1,23 @@
+${AnsiColor.BRIGHT_GREEN}
+///////${AnsiColor.BRIGHT_BLACK}////${AnsiColor.BRIGHT_CYAN}/////////${AnsiColor.BRIGHT_MAGENTA}//////${AnsiColor.BRIGHT_RED}//////////////////////////////////////////${AnsiColor.BRIGHT_BLACK}
+//                          _ooOoo_                               //${AnsiColor.BRIGHT_CYAN}
+//                         o8888888o                              //${AnsiColor.BRIGHT_MAGENTA}
+//                         88" . "88                              //${AnsiColor.BRIGHT_RED}
+//                         (| ^_^ |)                              //${AnsiColor.BRIGHT_YELLOW}
+//                         O\  =  /O                              //${AnsiColor.BRIGHT_RED}
+//                      ____/`---'\____                           //${AnsiColor.BRIGHT_MAGENTA}
+//                    .'  \\|     |//  `.                         //${AnsiColor.BRIGHT_CYAN}
+//                   /  \\|||  :  |||//  \                        //${AnsiColor.BRIGHT_BLACK}
+//                  /  _||||| -:- |||||-  \                       //${AnsiColor.BRIGHT_YELLOW}
+//                  |   | \\\  -  /// |   |                       //${AnsiColor.BRIGHT_BLACK}
+//                  | \_|  ''\---/''  |   |                       //${AnsiColor.BRIGHT_CYAN}
+//                  \  .-\__  `-`  ___/-. /                       //${AnsiColor.BRIGHT_MAGENTA}
+//                ___`. .'  /--.--\  `. . ___                     //${AnsiColor.BRIGHT_RED}
+//              ."" '<  `.___\_<|>_/___.'  >'"".                  //${AnsiColor.BRIGHT_MAGENTA}
+//            | | :  `- \`.;`\ _ /`;.`/ - ` : | |                 //${AnsiColor.BRIGHT_CYAN}
+//            \  \ `-.   \_ __\ /__ _/   .-` /  /                 //${AnsiColor.BRIGHT_BLACK}
+//      ========`-.____`-.___\_____/___.-`____.-'========         //${AnsiColor.BRIGHT_YELLOW}
+//                           `=---='                              //${AnsiColor.BRIGHT_CYAN}
+//      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^        //${AnsiColor.BRIGHT_MAGENTA}
+//                  佛祖保佑       永不宕机     永无BUG            //${AnsiColor.BRIGHT_YELLOW}
+////////////////////////////////////////////////////////////////////
